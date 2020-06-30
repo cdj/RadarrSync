@@ -78,7 +78,7 @@ def addMovie(primaryServer, syncServer):
     searchid = []
     for movie in primaryServer['movies']:  # interate through primary server, building a list of movies w/ correct profile
         if movie['profileId'] == syncServer['profile']:
-            if movie['tmdbId'] not in syncServer['movies']:  # make sure we dont re-add movies that are already there
+            if movie['tmdbId'] not in syncServer['movieIDs']:  # make sure we dont re-add movies that are already there
                 images = movie['images']  # Images required to create movie, pull URL from primary server
                 logging.debug('''
                                     Title: {0}
