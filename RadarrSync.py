@@ -176,8 +176,7 @@ def delMovie(primaryServer, syncServer):
 # ---------------------------------------------Main Script-------------------------------------------------------------#
 # Loads an alternate config file so that I can work on my servers without uploading my personal config to github
 if DEV:
-    settingsFilename = os.path.join(os.getcwd(), 'Dev'
-                                                 'Config.txt')
+    settingsFilename = os.path.join(os.getcwd(), 'DevConfig.txt')
 else:
     settingsFilename = os.path.join(os.getcwd(), 'Config.txt')
 Config.read(settingsFilename)
